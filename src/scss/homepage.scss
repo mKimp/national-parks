@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@500&family=Zen+Antique&display=swap");
+@mixin input-style {
+  color: rgb(38, 35, 35);
+  background: transparent;
+  font-family: "Luckiest Guy", cursive;
+  width: 200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #144202, #dc4225);
+  overflow: auto;
+
+  h1 {
+    display: inline-block;
+    font-size: 4rem;
+    line-height: 0.9;
+    padding: 20px;
+    font-family: "Luckiest Guy", cursive;
+    text-transform: uppercase;
+    background: url("https://home-page-background.s3.us-west-2.amazonaws.com/wp5171500.jpg")
+      no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: bottom;
+  }
+
+  .react-dropdown-select.select-dropdown,
+  .react-dropdown-select-dropdown.react-dropdown-select-dropdown-position-bottom {
+    background: saddlebrown;
+    border: 2px solid greenyellow;
+    border-radius: 7px;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  input {
+    @include input-style();
+
+    &::placeholder {
+      @include input-style();
+    }
+  }
+}
